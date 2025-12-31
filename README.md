@@ -50,11 +50,10 @@
 - Options for interconnections - Wirebond(Stitch type), Bump/Solder
 
 #### Anatomy of packages
-- Leadframe - a thin metal frame that holds the silicon die and connects it to the outside world
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/6e1b71fe-7428-4ba8-b433-f2156fd5dad2" />
-<br> </br>
-- Laminate - organic substrate with coarse metal routing and ground planes, used to interconnect die bumps to BGA balls and the PCB
-- Advanced package substrates
+- Leadframe: a thin metal frame that holds the silicon die and connects it to the outside world
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/6e1b71fe-7428-4ba8-b433-f2156fd5dad2" /> <br/>
+- Laminate: organic substrate with coarse metal routing and ground planes, used to interconnect die bumps to BGA balls and the PCB <br/>
+- Advanced package substrates: 
     1. 2D Layer
          - Two dies placed on the same substrate (e.g., FCBGA)
          - Better than using two separate substrates
