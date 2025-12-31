@@ -39,11 +39,11 @@
  1. Through hole mounting - TO, DIP, PGA
  2. Surface mount technology
   - QFN (Quad Flat No-Lead) – Leadless package, good thermal and electrical performance, small footprint
-  - QFP (Quad Flat Package) – Gull-wing leads on all sides, easy to inspect and solder
+  - QFP (Quad Flat Package) – Leads on all sides, easy to inspect and solder
   - PBGA (Plastic Ball Grid Array) – Solder balls underneath, high I/O density, better signal integrity
   - LGA (Land Grid Array) – Flat lands instead of balls, used where socketing or fine pitch is needed
   - CSP (Chip Scale Package) – Package size ≈ die size, similar to BGA, very compact
-  - PoP (Package on Package) – Multiple packages stacked vertically, saves board space (common in mobiles)
+  - PoP (Package on Package) – Multiple packages stacked vertically, saves board space, used in mobiles generally
   - MCM (Multi-Chip Module) – Multiple dies integrated in one package, improves performance and integration
 
 - Options for carrier: Leadframe, laminate, plastic, ceramic(for high temperature), organic RDL, silicon, glass
@@ -68,7 +68,7 @@
           - Designed to support multiple chips, while RDL works well for 2 dies, but becomes complex beyond that
           - Organic interposer has dedicated power and ground planes
     4. 2.5 D
-          - Uses an silicon interposer
+          - Uses a silicon interposer
           - Passive TSV interposer, while in 3D we use an active TSV interposer 
           - Silicon interposer with very fine metal layers, allowing signal lines to be routed extremely close to ground planes, enabling controlled impedance
           - Fine metal routing + close ground planes create short return paths, reducing noise and crosstalk
