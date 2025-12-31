@@ -51,11 +51,9 @@
 
 #### Anatomy of packages
 -Leadframe - a thin metal frame that holds the silicon die and connects it to the outside world
-<img width="150" height="71" alt="image" src="https://github.com/user-attachments/assets/6e1b71fe-7428-4ba8-b433-f2156fd5dad2" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/6e1b71fe-7428-4ba8-b433-f2156fd5dad2" />
 - Laminate
 - Advanced package substrates
-<img width="1185" height="329" alt="image" src="https://github.com/user-attachments/assets/949ef62d-97d3-4504-9a24-a3872fadc33f" />
-
     1. 2D Layer
          - Two dies placed on the same substrate (e.g., FCBGA)
          - Better than using two separate substrates
@@ -75,3 +73,4 @@
           - Fine metal routing + close ground planes create short return paths, reducing noise and crosstalk
           - Compared to organic substrates with coarse metal and distant ground planes, 2.5D achieves much higher bandwidth and signal integrity
           - Example - CoWoS (Chip on Wafer on Substrate)
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/949ef62d-97d3-4504-9a24-a3872fadc33f" />
