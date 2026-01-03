@@ -105,7 +105,7 @@
   - Bump formation on Si
       1. Before Reflow <br/>
         - Solder is deposited on UBM (Under Bump Metallization) on silicon <br/>
-        - Formed by electroplating/solder paste printing / ball placement <br/>
+        - Formed by electroplating/solder paste printing/ball placement <br/>
         - Bump shape is irregular or column-like <br/>
         - Solder is solid, and the mechanical strength is low <br/>
       2. After Reflow <br/>
@@ -115,8 +115,8 @@
         - Strong mechanical and electrical joint <br/>
         - Final bump height and diameter are defined <br/>
   - Flipping the chip
-  - Die is placed on the substrate (Substarte already has bond pad, and flux is applied on the pads)
-  - To attach the solder balls, heat and pressure is applied - Thermocompression 
+  - Die is placed on the substrate (Substrate already has a bond pad, and flux is applied on the pads)
+  - To attach the solder balls, heat and pressure are applied - Thermocompression 
   - Solder Reflow
   - Flux cleansing - Using solvent spray
   - Underfill dispensing - Epoxy material filled between die and substrate to reduce thermo-mechanical stress and improve joint reliability
@@ -125,3 +125,13 @@
   - Marking
   - Ball mounting on the substrate and reflow
 <img width="500" height="226" alt="image" src="https://github.com/user-attachments/assets/d29fa7e3-a1b4-4836-a00e-6d4850816707" />
+
+#### Wafer-level Packaging
+##### Reconstitution process
+- Known good dies are picked and placed on a temporary carrier from the wafer
+- Modling compound is applied, and the temporary carrier is removed. We get a reconstituted wafer, which is used for further processes
+
+##### RDL preparation
+- Dielectric is coated on the carrier
+- 1st RDL metal layer patterning, and is continued with dielectric and metal layers alternatively as per the requirement
+
