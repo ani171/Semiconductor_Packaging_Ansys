@@ -197,7 +197,17 @@
     - Thickness = -0.1
     - 3mm x 3mm
     - Modified epoxy material
-- Bond pad
+- Bond pad on die
     - 0.2 x 0.2
-    - First one - 0.2,0.2,0.2
+    - First one (0.2,0.2,0.2)
+    - Second one (0.5,0.2,02)
     - Thickness = 0.005mm
+- Bond pad on substrate
+    - 0.2 x 0.2
+    - First one (0.2,-0.8,-0.1)
+    - Thickness = 0.005mm
+- Bond wire
+    - JEDEC 4-point type
+    - h1= 0.2mm
+    - h2=0.305mm (h2 should be higher)
+    - diameter = 0.025mm
