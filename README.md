@@ -59,9 +59,11 @@
          - Better than using two separate substrates
          - Die-to-die communication goes via BGA → substrate → other die
     2. 2.1D
-         - Adds a Redistribution Layer (RDL) between die and substrate
-         - RDL provides shorter internal connections
-         - Reduces signal path length compared to 2D
+         - #### RDL
+           - Adds a Redistribution Layer (RDL) between die and substrate. RDL allows the rearrangement of the connectivity
+           - Die has very small bond pand size and at different locations, which has to be connected to the bond pads of the substarte which are in a different geometrical arrangement and have to be connected. RDL enables this connectivity
+           - RDL provides shorter internal connections
+           - Reduces signal path length compared to 2D
     3. 2.3 D
           - Uses an organic interposer between the die and substrate
           - Helps fan-out high-density connections
