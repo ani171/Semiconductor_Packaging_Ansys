@@ -197,3 +197,7 @@
     - Thickness = -0.1
     - 3mm x 3mm
     - Modified epoxy material
+- Bond pad
+    - 0.2 x 0.2
+    - First one - 0.2,0.2,0.2
+    - Thickness = 0.005mm
