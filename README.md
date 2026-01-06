@@ -177,3 +177,23 @@
 ##### Speed tests 
 - Assesses the speed of units according to data sheet specifications
 - Sorting is done based on speed
+
+
+## Module 5
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/124409f2-b7b2-487b-a54a-425fe4772a00" />
+
+- Die dimensions
+    - 3mm x 3mm
+    - Positions (0,0,0) for center
+    - Thickness = 0.2mm
+    - Silicon
+- Substrate dimensions
+    - 5mm x 5mm
+    - Positions (-1,-1,-0.1)
+    - Thickness = 0.5mm (Keep it -0.5 because me need it in -z direction, below the die)
+    - FR4 Material
+- Epoxy
+    - Positions (0,0,0)
+    - Thickness = -0.1
+    - 3mm x 3mm
+    - Modified epoxy material
