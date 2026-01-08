@@ -137,6 +137,15 @@
 - Dielectric is coated on the carrier
 - 1st RDL metal layer patterning, and is continued with dielectric and metal layers alternatively as per the requirement
 
+## Module 3
+
+<img width="2171" height="1151" alt="image" src="https://github.com/user-attachments/assets/b04ea4e2-0967-4292-a2c0-4c61547a2f7c" />
+
+<img width="1853" height="1051" alt="image" src="https://github.com/user-attachments/assets/b307b010-5f94-454e-b2db-e9a9a01e99f2" />
+
+
+<img width="1844" height="1081" alt="image" src="https://github.com/user-attachments/assets/dd32072e-ed58-4a50-aac6-3cf5487b69ce" />
+
 
 ## Module 4
 
@@ -211,5 +220,12 @@
     - h1= 0.2mm
     - h2=0.305mm (h2 should be higher)
     - diameter = 0.025mm
+- Molding compound
+    - 5 x 5mm
+    - Positions - (-1,-1,-0.1)
+    - Material - Epoxy_Kevlar
+    - Thickness = 1.2mm
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/c3e8b03e-5b6f-4e23-a047-d60a4470287f" />
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/49e767bf-6a25-4fbb-8f73-d27baabfdc33" />
+<img width="1773" height="1042" alt="image" src="https://github.com/user-attachments/assets/4c97774c-db26-4fb2-bb45-72839ddf0468" />
+
