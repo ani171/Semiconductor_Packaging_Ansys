@@ -1,4 +1,4 @@
-# Semiconductor-Packaging
+# Semiconductor Packaging
 
 ## Module 1
 #### Why is semiconductor packaging needed?
