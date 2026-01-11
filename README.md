@@ -137,14 +137,110 @@
 - Dielectric is coated on the carrier
 - 1st RDL metal layer patterning, and is continued with dielectric and metal layers alternatively as per the requirement
 
-## Module 3
+## Module 3 
+### Ansys Icepak Lab – Thermal Analysis of a Flipchip BGA 
+#### Step 1: 
+- Insert Icepak Design
+- Open ANSYS Workbench
+- Navigate to: `Project → Insert → Icepak Design`
+#### Step 2: 
+- Open the Icepak Layout
+- Click the Icepak tab in the top toolbar
+- This launches the Icepak layout environment
+#### Step 3: 
+- Create a Flip-Chip BGA Package
+- Navigate to: `Icepak → Toolkit → Geometry → Packages → Flipchip_BGA`
+- A configuration window will appear
+- Set the following parameters:
+    - xLength: 15 mm
+    - yLength: 15 mm
+    - Package Thickness: 3 mm
+    - Model Type: Detailed
+    - Symmetry: Full
+- Click OK to generate the 3D model
+- The Flip-Chip BGA package will appear in the working space
 
-<img width="2171" height="1151" alt="image" src="https://github.com/user-attachments/assets/b04ea4e2-0967-4292-a2c0-4c61547a2f7c" />
+<p align="left">
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b04ea4e2-0967-4292-a2c0-4c61547a2f7c" />
+</p>
+<p align="left">
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/91161ca0-e78c-4f65-80a4-ab4bd31fcdb4" />
+</p>
+<p align="left">
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/de148fc2-e206-4016-b658-66b7dc75312e" />
+</p>
 
-<img width="1853" height="1051" alt="image" src="https://github.com/user-attachments/assets/b307b010-5f94-454e-b2db-e9a9a01e99f2" />
+#### Step 4:
+- In the Model Tree, expand the Solids section
+- Observe the generated components such as:
+    - Substrate
+    - Die
+    - Underfill
+    - Other package elements
+
+#### Step 5: 
+- Assign Thermal Power
+- Navigate to: `Project Manager → Thermal`
+- Enter the Power value (e.g., 1 W)
+- Click OK
+
+#### Step 6: 
+- In Solids, select Flipchip-BGA1_substrate
+- `Right-click → Assign Thermal → Source`
+- In the dialog box:
+    - Set Thermal Condition to Ambient Temperature
+- Click OK
+- Delete any unnecessary thermal elements (e.g., Flipchip_BGA_trace1) under the Thermal node
+
+#### Step 7: 
+- Assign Temperature Monitors
+- In Solids, select Substrate
+- `Right-click → Assign Monitor → Point`
+- Enable Temperature → Click OK
+- Repeat the same steps for:
+    - Die
+    - Underfill
+#### Step 8: 
+- Generate Mesh
+- Navigate to the Mesh tab
+- Click: `Simulation → Generate Mesh`
+- Save the file when prompted
+- Click OK
+
+#### Step 9: 
+- Inspecting Mesh Quality
+- Open Mesh Visualization
+- Click Quality
+- Verify mesh parameters such as:
+    - Face Alignment
+    - Skewness
+    - Volume
+<p align="left">
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/e881404d-4cd9-4bf8-a890-81b56d7a1b3e" />
+</p>
+<p align="left">
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/d3672a0e-3839-4fdf-9e6d-0b3a525c94dd" />
+</p>
+
+#### Step 10: 
+- Click Validate from the top menu bar
+- Ensure all checks return green ticks
+- This confirms the model is ready for simulation
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/84e7e7aa-6f37-4141-854b-9c38afea6ed2" />
+
+#### Step 11: 
+- Click Analyze All from the top toolbar
+- Select the Flip-Chip BGA package
+- Navigate to: `Plot Field → Temperature → Temperature`
+- Configure Output Options:
+    - Enable Specify Name
+    - Enable Specify Folder
+    - Enable Plot on Surface Only
+    - Under Surface Smoothing, enable Gaussian Smoothing
+- Click OK, then Done
 
 
-<img width="1844" height="1081" alt="image" src="https://github.com/user-attachments/assets/dd32072e-ed58-4a50-aac6-3cf5487b69ce" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/dd32072e-ed58-4a50-aac6-3cf5487b69ce" />
 
 
 ## Module 4
@@ -189,10 +285,56 @@
 
 
 ## Module 5
+### Model the Wire Bond Package in Ansys AEDT 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/124409f2-b7b2-487b-a54a-425fe4772a00" />
 
-- Die dimensions
-    - 3mm x 3mm
+#### Step 1: 
+- Launch ANSYS Electronics Desktop
+- Select Q3D Layout Design to create a new project
+
+#### Step 2: Create the Die
+- Navigate to: `Modeler → Surface → Rectangle`
+- Draw a rectangular surface to represent the die
+- Set the die thickness to 0.2 mm
+- Rename the object to die
+- Assign material: Silicon
+
+#### Step 3: Create the Substrate
+- Draw another rectangle using the same tool
+- Set the substrate size to 5 mm × 5 mm
+- Thicken the rectangle to –0.5 mm to form the substrate body
+- Rename the object to substrate
+- Position the die on top of the substrate by setting its coordinates to: (x = –1, y = –1, z = –0.1)
+
+#### Step 4: Add Die Attach Layer
+- Create a rectangle matching the die dimensions at the origin (0, 0, 0)
+- Set the thickness to –0.1 mm
+- Assign the material modified_epoxy to enable thermal conductivity analysis
+
+#### Step 5: Add Die Pad
+- Create a thin rectangular surface to represent the die pad
+- Set the thickness to 0.005 mm
+
+#### Step 6: Create Bond Pads
+- Add bond pads on both the die and the substrate
+- These pads act as electrical connection points for wire bonding
+- Assign a conductive material such as gold or aluminum
+
+#### Step 7: Connect Pads Using Bond Wires
+- Use the Bondwire tool
+- Connect the die bond pads to the substrate pads
+- Assign gold as the bond wire material
+
+#### Step 8: Add Mold Compound
+- Create a rectangular mold compound to encapsulate the die and bond wires
+- Set the mold thickness to 1.2 mm
+- Assign an epoxy molding compound (EMC) material
+
+<details>
+<summary>Dimensions, Positions and Materials overview</summary>
+
+- Die dimensions <br>
+    - 3mm x 3mm 
     - Positions (0,0,0) for center
     - Thickness = 0.2mm
     - Silicon
@@ -225,7 +367,14 @@
     - Positions - (-1,-1,-0.1)
     - Material - Epoxy_Kevlar
     - Thickness = 1.2mm
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/c3e8b03e-5b6f-4e23-a047-d60a4470287f" />
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/49e767bf-6a25-4fbb-8f73-d27baabfdc33" />
-<img width="1773" height="1042" alt="image" src="https://github.com/user-attachments/assets/4c97774c-db26-4fb2-bb45-72839ddf0468" />
+</details>
 
+<p align="left">
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/c3e8b03e-5b6f-4e23-a047-d60a4470287f" />
+</p>
+<p align="left">
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/49e767bf-6a25-4fbb-8f73-d27baabfdc33" />
+</p>
+<p align="left">
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/4c97774c-db26-4fb2-bb45-72839ddf0468" />
+</p>
