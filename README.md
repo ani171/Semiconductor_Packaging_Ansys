@@ -1,5 +1,5 @@
 # Semiconductor Packaging
-
+This GitHub repository serves as documentation for the 10-day [Semiconductor Packaging - Fundamentals of Design and Testing](https://www.vlsisystemdesign.com/packaging/) workshop conducted by [VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/) 
 ## Module 1
 #### Why is semiconductor packaging needed?
 - When dies/chips come out of the wafer, they are made in a protected environment, but ICs are exposed to the real world. So packaging:
