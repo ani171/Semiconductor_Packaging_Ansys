@@ -56,26 +56,55 @@ This GitHub repository serves as documentation for the 10-day [Semiconductor Pac
 - **In-Field Operation**  
   Deployment of the IC in real-world applications where it operates throughout its lifetime with reliability monitoring and updates if required.
 #### Choosing the right package
-1. Application – Memory/logic, etc.; bandwidth decides speed and number of interconnects
-2. Thermal Dissipation – Chip power and mounting material decide package type; high-temperature chips can’t use laminate organic substrates
-3. Form Factor – Package thickness and footprint constraints
-4. Reliability – Performance over time and operating conditions
-5. Durability – Mechanical and environmental robustness
-6. Cost 
+1. Application Requirements 
+    - The intended application of the IC—whether for memory, logic, analog, or mixed-signal—strongly influences packaging decisions. High-performance applications may require advanced interconnect structures or high bandwidth to support data throughput. The number and type of interconnects directly impact signal integrity and overall system speed.
+2. Thermal Dissipation 
+    - Heat management is critical in modern ICs. The chip’s power density, along with the choice of substrate and thermal interface materials, determines the package type. High-power or high-temperature chips often require thermally conductive materials like ceramic or metal, as organic laminate substrates may fail under excessive heat.
+3. Form Factor 
+    - Space constraints in end products dictate package dimensions, including thickness, footprint, and height. Compact form factors are essential for mobile and wearable devices, while larger form factors may be acceptable for desktop or server applications.
+4. Reliability 
+    - Long-term performance under operating conditions is a key consideration. Packages must maintain electrical and mechanical integrity over the device’s lifetime, including tolerance to temperature cycling, humidity, and power fluctuations.
+5. Durability 
+    - Packages must withstand mechanical stress during assembly, shipping, and usage. Environmental factors such as vibration, shock, and moisture can influence the choice of protective encapsulation and ruggedization techniques.
+6. Cost
+    - Cost remains a major driver in package selection. While advanced packaging solutions provide superior performance, they often come at higher manufacturing and material costs. Trade-offs between performance, reliability, and budget are carefully analyzed in industrial settings.
 
 <img width="1263" height="483" alt="image" src="https://github.com/user-attachments/assets/2fed2779-734c-459b-931e-af390548b3a5" />
 
  #### Packaging classification
- 1. Through hole mounting - TO, DIP, PGA
- 2. Surface mount technology
-  - QFN (Quad Flat No-Lead) – Leadless package, good thermal and electrical performance, small footprint
-  - QFP (Quad Flat Package) – Leads on all sides, easy to inspect and solder
-  - PBGA (Plastic Ball Grid Array) – Solder balls underneath, high I/O density, better signal integrity
-  - LGA (Land Grid Array) – Flat lands instead of balls, used where socketing or fine pitch is needed
-  - CSP (Chip Scale Package) – Package size ≈ die size, similar to BGA, very compact
-  - PoP (Package on Package) – Multiple packages stacked vertically, saves board space, used in mobiles generally
-  - MCM (Multi-Chip Module) – Multiple dies integrated in one package, improves performance and integration
+## 1. Through-Hole Mounting
 
+Through-hole mounting is a traditional method for attaching electronic components to a PCB, where component leads pass through holes in the board and are soldered on the opposite side. This method provides strong mechanical bonding and is suitable for high-reliability applications.
+
+| Package Type | Full Name | Description | Typical Applications |
+|--------------|-----------|-------------|--------------------|
+| **TO** | Transistor Outline | Used for discrete components like transistors, diodes, and voltage regulators. Features a metal or plastic body with leads extending through the PCB. Good for heat dissipation when attached to a heat sink. | Power transistors, diodes, voltage regulators |
+| **DIP** | Dual Inline Package | Rectangular package with two parallel rows of pins. Easy to handle and solder, suitable for prototyping and through-hole PCBs. | Microcontrollers, memory ICs, logic ICs |
+| **PGA** | Pin Grid Array | Array of pins on the underside of the IC that insert into PCB holes. Offers high pin count and reliable connections. Often used for processors. | CPUs, high-pin-count ICs, socketed ICs |
+
+> **Notes:**  
+> - Through-hole components are mechanically robust and suitable for high-power or high-stress applications.  
+> - PGA packages allow easy replacement of ICs without soldering, ideal for prototyping.
+
+---
+
+## 2. Surface Mount Technology (SMT)
+
+SMT allows components to be mounted directly onto the surface of a PCB without passing leads through holes. It enables compact designs, higher pin counts, and faster assembly.
+
+| Package Type | Full Name | Description | Typical Applications |
+|--------------|-----------|-------------|--------------------|
+| **QFN** | Quad Flat No-Lead | Leadless package with pads underneath. Provides good thermal and electrical performance, very compact footprint. | High-speed ICs, RF modules, power management ICs |
+| **QFP** | Quad Flat Package | Leads extend from all sides, making inspection and soldering easier. | Microcontrollers, FPGAs, logic ICs |
+| **PBGA** | Plastic Ball Grid Array | Solder balls underneath the package. Offers high I/O density and improved signal integrity. | CPUs, GPUs, memory ICs |
+| **LGA** | Land Grid Array | Flat lands instead of solder balls. Used where socketing or fine pitch is required. | High-performance processors, server ICs |
+| **CSP** | Chip Scale Package | Package size approximately equals die size. Very compact and similar to BGA. | Smartphones, compact devices, memory ICs |
+| **PoP** | Package on Package | Multiple packages stacked vertically. Saves board space, commonly used in mobile devices. | Mobile processors, memory stacking |
+| **MCM** | Multi-Chip Module | Multiple dies integrated in a single package. Improves performance and integration density. | High-performance computing, system-in-package applications |
+
+> **Notes:**  
+> - SMT packages enable miniaturization, automated assembly, and high-density PCB designs.  
+> - Selection depends on thermal requirements, pin count, and mechanical constraints.
 - Options for carrier: Leadframe, laminate, plastic, ceramic(for high temperature), organic RDL, silicon, glass
 - Options for interconnections - Wirebond(Stitch type), Bump/Solder
 
