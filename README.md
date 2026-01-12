@@ -2,29 +2,59 @@
 This GitHub repository serves as documentation for the 10-day [Semiconductor Packaging - Fundamentals of Design and Testing](https://www.vlsisystemdesign.com/packaging/) workshop conducted by [VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/) 
 ## Module 1
 #### Why is semiconductor packaging needed?
-- When dies/chips come out of the wafer, they are made in a protected environment, but ICs are exposed to the real world. So packaging:
-  1. Enables the die to connect to other dies
-  2. Protection of semiconductor devices (Corrosion, moisture, and physical damage)
+- Semiconductor packaging is the process of enclosing a fabricated silicon die in a protective structure that enables reliable electrical connections between the integrated circuit (IC) and the external system. It acts as the critical interface between the microscopic on-chip circuitry and the macroscopic electronic environment in which the IC operates.
+- Although semiconductor dies are fabricated in highly controlled and clean environments, once separated from the wafer, they are exposed to real-world operating conditions. Therefore, packaging plays a vital role in ensuring that the IC can function reliably outside the fabrication facility. The packaging process provides essential mechanical support, electrical interconnection, thermal management, and environmental protection throughout the operational lifetime of the device.
+- Specifically, semiconductor packaging:
+    1. Enables the die to electrically connect with other dies and external system components.
+    2. Protects the semiconductor device from environmental and mechanical hazards such as corrosion, moisture ingress, contamination, and physical damage.
+<img width="2497" height="1105" alt="image" src="https://github.com/user-attachments/assets/92db1f73-673d-441e-9cd0-ab48112bc8c1" />
+
 <br> </br>
 #### IC Manufacturing Flow:
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/0b4aa082-0e2d-4ffb-a42b-fbfbf42a0bc1" />
+
 1. Design – Circuit & layout design
+   - The design stage involves converting system requirements into a functional integrated circuit. Circuit design defines the electrical behavior of the IC, while layout design translates the circuit into physical geometries on silicon. This stage ensures functionality, performance optimization, and manufacturability through simulations and design rule checks.
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/61aabcca-1cf6-4dbb-987a-5901f435bc06" />
+
 2. Wafer Process – Fabrication of ICs on wafers
+  - In this stage, integrated circuits are fabricated on silicon wafers using processes such as lithography, deposition, doping, and etching. Multiple dies are manufactured simultaneously on a single wafer in a controlled cleanroom environment. The objective is to achieve high yield and reliable device characteristics.
 3. Package & Test
-    - Wafer Test – Test individual dies on wafer
-    - Package – Encapsulation of dies
-    - Package Test – Test packaged ICs
+  - Wafer Test: Individual dies on the wafer are electrically tested to identify good and defective dies before packaging.
+  - Packaging: Good dies are separated from the wafer and encapsulated to provide mechanical protection, electrical connectivity, and thermal management.
+  - Package Test: Packaged ICs undergo electrical and functional testing to ensure they meet performance and reliability specifications.
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/0dcc9b35-257a-461a-85f8-501763c5b682" /> <br/>
 4. Assembly – Final integration into products
+  - Packaged semiconductor devices are mounted onto printed circuit boards (PCBs) using surface-mount or through-hole assembly techniques.
+  - Electrical and mechanical interconnections are formed through solder reflow or wave soldering processes.
+  - Assembled boards are integrated with other subsystems to form complete electronic products.
+  - System-level testing and validation are conducted to ensure functional correctness, reliability, and compliance with operational requirements. <br/>
 
-#### Types of Manufacturers:
+#### Types of Manufacturers: 
 
-- IDM (Integrated Device Manufacturer) – Handles design, fabrication, packaging, and testing in-house
-- OSAT (Outsourced Semiconductor Assembly & Test) – Specializes in packaging and testing only
-- Fabless – Only designs ICs; fabrication outsourced
-- Foundry – Only fabricates ICs for other companies
+| Model | Primary Role | Key Responsibilities | Examples |
+|------|-------------|---------------------|----------|
+| **IDM (Integrated Device Manufacturer)** | End-to-end semiconductor development | • IC design, fabrication, packaging, and testing handled in-house<br>• Full control over process, yield, and IP<br>• High capital investment required | Intel, Samsung, Texas Instruments |
+| **OSAT (Outsourced Semiconductor Assembly & Test)** | Packaging and testing services | • Specializes only in assembly, packaging, and testing<br>• Does not perform IC design or wafer fabrication<br>• Supports both IDMs and fabless companies | ASE, Amkor, JCET |
+| **Fabless** | IC design and system architecture | • Focuses only on IC design and verification<br>• Wafer fabrication and packaging are outsourced<br>• Low capital expenditure, high innovation focus | Qualcomm, NVIDIA, AMD |
+| **Foundry** | Wafer fabrication | • Manufactures ICs based on customer designs<br>• No involvement in IC design<br>• Operates advanced fabrication nodes | TSMC, GlobalFoundries, UMC |
 
 #### Silicon lifecycle
-<img width="541" height="541" alt="image" src="https://github.com/user-attachments/assets/7fcb828b-dfbd-4ff1-b2e8-97e7ae28cfdd" />
+<img width="541" height="541" alt="image" src="https://github.com/user-attachments/assets/7fcb828b-dfbd-4ff1-b2e8-97e7ae28cfdd" /> <br/>
+- **Design**  
+  Defines the functionality, architecture, and physical layout of the integrated circuit through circuit design, verification, and layout implementation.
 
+- **Manufacturing**  
+  Fabrication of the integrated circuit on silicon wafers using semiconductor processes such as lithography, deposition, and etching in a controlled cleanroom environment.
+
+- **Test**  
+  Electrical and functional testing at wafer and package levels to detect defects and verify compliance with design specifications.
+
+- **Debug / Bring-up**  
+  Initial validation of first silicon by powering up the chip, identifying functional issues, and optimizing performance.
+
+- **In-Field Operation**  
+  Deployment of the IC in real-world applications where it operates throughout its lifetime with reliability monitoring and updates if required.
 #### Choosing the right package
 1. Application – Memory/logic, etc.; bandwidth decides speed and number of interconnects
 2. Thermal Dissipation – Chip power and mounting material decide package type; high-temperature chips can’t use laminate organic substrates
