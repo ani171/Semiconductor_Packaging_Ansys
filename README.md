@@ -7,12 +7,23 @@ This GitHub repository serves as documentation for the 10-day [Semiconductor Pac
 - Specifically, semiconductor packaging:
     1. Enables the die to electrically connect with other dies and external system components.
     2. Protects the semiconductor device from environmental and mechanical hazards such as corrosion, moisture ingress, contamination, and physical damage.
-<img width="2497" height="1105" alt="image" src="https://github.com/user-attachments/assets/92db1f73-673d-441e-9cd0-ab48112bc8c1" />
+
+<figure>
+  <img width="2497" height="1105" alt="image" src="https://github.com/user-attachments/assets/92db1f73-673d-441e-9cd0-ab48112bc8c1" />
+  <figcaption>
+    <em>Figure: Semiconductor manufacturing flow from wafer to singulated die and final packaged device</em>
+  </figcaption>
+</figure>
 
 <br> </br>
 #### IC Manufacturing Flow:
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/0b4aa082-0e2d-4ffb-a42b-fbfbf42a0bc1" />
-
+<figure>
+  <img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/0b4aa082-0e2d-4ffb-a42b-fbfbf42a0bc1" />
+  <figcaption>
+    <em>Figure: Semiconductor industry value chain highlighting IDM, Fabless, Foundry, and OSAT models, showing the flow from design, wafer fabrication, package & test, to final assembly</em>
+  </figcaption>
+</figure>
+<br> </br>
 1. Design – Circuit & layout design
    - The design stage involves converting system requirements into a functional integrated circuit. Circuit design defines the electrical behavior of the IC, while layout design translates the circuit into physical geometries on silicon. This stage ensures functionality, performance optimization, and manufacturability through simulations and design rule checks.
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/61aabcca-1cf6-4dbb-987a-5901f435bc06" />
@@ -41,6 +52,7 @@ This GitHub repository serves as documentation for the 10-day [Semiconductor Pac
 
 #### Silicon lifecycle
 <img width="541" height="541" alt="image" src="https://github.com/user-attachments/assets/7fcb828b-dfbd-4ff1-b2e8-97e7ae28cfdd" /> <br/>
+
 - **Design**  
   Defines the functionality, architecture, and physical layout of the integrated circuit through circuit design, verification, and layout implementation.
 
@@ -69,9 +81,15 @@ This GitHub repository serves as documentation for the 10-day [Semiconductor Pac
 6. Cost
     - Cost remains a major driver in package selection. While advanced packaging solutions provide superior performance, they often come at higher manufacturing and material costs. Trade-offs between performance, reliability, and budget are carefully analyzed in industrial settings.
 
-<img width="1263" height="483" alt="image" src="https://github.com/user-attachments/assets/2fed2779-734c-459b-931e-af390548b3a5" />
+<figure>
+  <img width="1263" height="483" alt="image" src="https://github.com/user-attachments/assets/2fed2779-734c-459b-931e-af390548b3a5" />
+  <figcaption>
+    <em>Figure: Die, carrier, and PCB interconnect hierarchy in a molded semiconductor package</em>
+  </figcaption>
+</figure>
 
- #### Packaging classification
+
+#### Packaging classification
 #### Through-Hole Mounting
 
 Through-hole mounting is a traditional method for attaching electronic components to a PCB, where component leads pass through holes in the board and are soldered on the opposite side. This method provides strong mechanical bonding and is suitable for high-reliability applications.
@@ -86,7 +104,12 @@ Through-hole mounting is a traditional method for attaching electronic component
 > - Through-hole components are mechanically robust and suitable for high-power or high-stress applications.  
 > - PGA packages allow easy replacement of ICs without soldering, ideal for prototyping.
 
----
+<figure>
+  <img width="965" height="387" alt="image" src="https://github.com/user-attachments/assets/8051e685-e3b0-4fad-92c6-cce5ec518c31" />
+  <figcaption>
+    <em>Figure: Through Hole Technology: Sino Voltaics </em>
+  </figcaption>
+</figure>
 
 #### Surface Mount Technology (SMT)
 
@@ -105,6 +128,13 @@ SMT allows components to be mounted directly onto the surface of a PCB without p
 > **Notes:**  
 > - SMT packages enable miniaturization, automated assembly, and high-density PCB designs.  
 > - Selection depends on thermal requirements, pin count, and mechanical constraints.
+
+<figure>
+  <img width="980" height="403" alt="image" src="https://github.com/user-attachments/assets/b0a699ee-9d0d-494b-a29b-953f14c0b323" />
+  <figcaption>
+    <em>Figure: Surface Mount Technology Technology: Sino Voltaics </em>
+  </figcaption>
+</figure>
 
 #### Advanced Package Substrates
 
