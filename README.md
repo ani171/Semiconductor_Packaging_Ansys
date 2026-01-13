@@ -100,7 +100,6 @@ Through-hole mounting is a traditional method for attaching electronic component
 | **DIP** | Dual Inline Package | Rectangular package with two parallel rows of pins. Easy to handle and solder, suitable for prototyping and through-hole PCBs. | Microcontrollers, memory ICs, logic ICs |
 | **PGA** | Pin Grid Array | Array of pins on the underside of the IC that insert into PCB holes. Offers high pin count and reliable connections. Often used for processors. | CPUs, high-pin-count ICs, socketed ICs |
 
-> **Notes:**  
 > - Through-hole components are mechanically robust and suitable for high-power or high-stress applications.  
 > - PGA packages allow easy replacement of ICs without soldering, ideal for prototyping.
 
@@ -124,8 +123,7 @@ SMT allows components to be mounted directly onto the surface of a PCB without p
 | **CSP** | Chip Scale Package | Package size approximately equals die size. Very compact and similar to BGA. | Smartphones, compact devices, memory ICs |
 | **PoP** | Package on Package | Multiple packages stacked vertically. Saves board space, commonly used in mobile devices. | Mobile processors, memory stacking |
 | **MCM** | Multi-Chip Module | Multiple dies integrated in a single package. Improves performance and integration density. | High-performance computing, system-in-package applications |
-
-> **Notes:**  
+  
 > - SMT packages enable miniaturization, automated assembly, and high-density PCB designs.  
 > - Selection depends on thermal requirements, pin count, and mechanical constraints.
 
@@ -189,7 +187,7 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 | **Signal Integrity** | Close proximity of signal lines to ground planes enables controlled impedance and short return paths. | Reduces noise and crosstalk significantly compared to organic interposers. |
 | **Performance** | Achieves much higher bandwidth and signal integrity than organic substrates. | Example: CoWoS (Chip on Wafer on Substrate). |
 
-> **Note on Silicon Interposer Manufacturing:**  
+> **Silicon Interposer Manufacturing:**  
 > - Interposer made from a silicon wafer with multiple fine metal layers.  
 > - TSVs (Through-Silicon Vias) connect top die pads to bottom substrate pads.  
 > - Provides high-density fan-out, short interconnects, and improved electrical performance.  
@@ -206,6 +204,8 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 | **Leadframe** | Metal frame that supports the die and provides electrical connections via leads. Easy to manufacture and cost-effective. | Standard ICs, low-cost logic and memory packages |
 | **Laminate** | Layered organic material used as substrate. Lightweight and flexible, suitable for medium-power applications. | BGAs, QFNs, consumer electronics |
 
+> - Carrier selection depends on **thermal, mechanical, and electrical requirements**.  
+
 #### Interconnection Options
 
 | Interconnection Type | Description | Typical Applications / Advantages |
@@ -215,8 +215,6 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/6e1b71fe-7428-4ba8-b433-f2156fd5dad2" /> <br/>
 
-> **Notes:**  
-> - Carrier selection depends on **thermal, mechanical, and electrical requirements**.  
 
 ## Module 2
 
@@ -229,7 +227,7 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 | **4. Board Assembly & Test** | Multiple packaged ICs are assembled onto a PCB and validated as a system. | - SMT/through-hole assembly <br> - Reflow soldering <br> - Board-level functional and electrical testing | Signal integrity, manufacturability |
 | **5. Product Assembly & Test** | Final product is assembled and validated before shipment. | - Mechanical integration <br> - Firmware/software loading <br> - System-level and environmental testing | Product quality, compliance, customer reliability |
 
-#### Packaging process
+### Packaging process
 
 ##### 1. Wafer Preparation (ISO Class 7)
 - Wafers are received in carriers and prepared for processing in a controlled cleanroom environment.
