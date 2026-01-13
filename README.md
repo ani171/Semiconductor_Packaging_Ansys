@@ -602,7 +602,7 @@ The main focus of this lab exercise is to build the complete cross-section of a 
 
 #### Wire Bond Package Specifications
 
-| Component          | Dimensions (mm)   | Position (X,Y,Z) (mm) | Thickness (mm) | Material / Type           | Notes / Additional Info           |
+| Component          | Dimensions (mm)   | Position (X,Y,Z) (mm) | Thickness (mm) | Material / Type           | To be noted         |
 |-------------------|-----------------|----------------------|----------------|--------------------------|----------------------------------|
 | **Die**           | 3 x 3           | (0, 0, 0)            | 0.2            | Silicon                  | Centered at origin               |
 | **Substrate**     | 5 x 5           | (-1, -1, -0.5)       | 0.5            | FR4                      | Positioned below die (-Z)       |
