@@ -399,7 +399,7 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 
 #### Step 4:
 - In the Model Tree, expand the Solids section
-- Observe the generated components such as:
+- Observe the generated components, such as:
     - Substrate
     - Die
     - Underfill
@@ -414,6 +414,7 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 - Navigate to: `Project Manager → Thermal`
 - Enter the Power value (e.g., 1 W)
 - Click OK
+
 |   |
 |---|
 | <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/17658342-00e6-4bb5-8ac1-0282af42543f" /> |
@@ -425,9 +426,11 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
     - Set Thermal Condition to Fixed Temperature
 - Click OK
 - Delete any unnecessary thermal elements (e.g., Flipchip_BGA_trace1) under the Thermal node
+<br> </br>
+
 |   |
 |---|
-| <img width="1484" height="1299" alt="image" src="https://github.com/user-attachments/assets/dc91fbbb-de88-4e82-8e26-6914bbd1dcdb" /> |
+| <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/dc91fbbb-de88-4e82-8e26-6914bbd1dcdb" /> |
 
 #### Step 7: 
 - Assign Temperature Monitors
@@ -437,6 +440,8 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 - Repeat the same steps for:
     - Die
     - Underfill
+<br> </br>
+
 |   |   |   |
 |---|---|---|
 | <img width="800" height="1000" alt="image" src="https://github.com/user-attachments/assets/3b4439e2-3c9b-459d-842b-76500e81bfbc" />| <img width="800" height="1000" alt="image" src="https://github.com/user-attachments/assets/c7368faf-ead4-4e6e-9b8e-309d3e36931f" /> | <img width="800" height="1000" alt="image" src="https://github.com/user-attachments/assets/41afeaef-24a9-4077-8ca2-b34347690060" /> |
@@ -447,9 +452,11 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 - Click: `Simulation → Generate Mesh`
 - Save the file when prompted
 - Click OK
+<br> </br>
+
 |   |
 |---|
-| <img width="2025" height="1224" alt="image" src="https://github.com/user-attachments/assets/ecf2fd8f-132a-4814-8b61-17591282a380" /> |
+| <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/ecf2fd8f-132a-4814-8b61-17591282a380" /> |
 
 #### Step 9: 
 - Inspecting Mesh Quality
@@ -458,6 +465,8 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 - Verify mesh parameters such as:
     - Face Alignment
     - Skewness
+<br> </br>
+
 |   |   |
 |---|---|
 | <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/e881404d-4cd9-4bf8-a890-81b56d7a1b3e" /> | <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/d3672a0e-3839-4fdf-9e6d-0b3a525c94dd" /> |
@@ -467,6 +476,8 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 - Click Validate from the top menu bar
 - Ensure all checks return green ticks
 - This confirms the model is ready for simulation
+<br> </br>
+
 |   |
 |---|
 | <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/84e7e7aa-6f37-4141-854b-9c38afea6ed2" /> |
