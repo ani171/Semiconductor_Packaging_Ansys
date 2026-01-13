@@ -125,10 +125,11 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 | **Connectivity** | RDL rearranges die connections to match substrate geometry. | Provides shorter internal connections and improved routing compared to 2D. |
 | **Signal Path** | Reduces signal length, improving performance and reducing delay. | Particularly effective for two-die systems. |
 
-> **Note on RDL Manufacturing:**  
+> **RDL:**  
 > - RDL is typically a thin metal layer (Cu) deposited on a polymer layer.  
 > - Requires photolithography to define fine traces.  
 > - Enables high-density routing without increasing substrate size.  
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/f863f356-e749-4bb6-9886-cdb905de6a4e" />
 
 #### 2.3D Package 
 
@@ -138,12 +139,13 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 | **Power/Ground** | Dedicated planes in interposer for power and ground. | Helps reduce IR drop and improves signal integrity. |
 | **Routing** | Organic interposer allows dense fan-out while maintaining manufacturability. | Becomes challenging beyond moderate pin counts compared to silicon interposer. |
 
-> **Note on Organic Interposer:**  
+> **Organic Interposer:**  
 > - Fabricated using laminated organic layers and thin metal traces.  
 > - Provides flexibility in routing and is cost-effective compared to silicon interposers.  
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/d6b62ae9-a664-4279-9797-18efeba6b472" />
 
 
-#### 4. 2.5D Package 
+#### 2.5D Package 
 
 | Feature | Description | Notes |
 |---------|-------------|-------|
@@ -156,6 +158,8 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 > - TSVs (Through-Silicon Vias) connect top die pads to bottom substrate pads.  
 > - Provides high-density fan-out, short interconnects, and improved electrical performance.  
 
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/9af7816d-c2cb-49d4-8849-8220de0cc0b1" />
+
 
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/949ef62d-97d3-4504-9a24-a3872fadc33f" />
 
@@ -165,11 +169,6 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 |--------------|-------------|---------------------------------|
 | **Leadframe** | Metal frame that supports the die and provides electrical connections via leads. Easy to manufacture and cost-effective. | Standard ICs, low-cost logic and memory packages |
 | **Laminate** | Layered organic material used as substrate. Lightweight and flexible, suitable for medium-power applications. | BGAs, QFNs, consumer electronics |
-| **Plastic** | Encapsulation material for protecting the die. Low-cost and widely used. | Standard IC packages, consumer electronics |
-| **Ceramic** | High-temperature resistant material. Excellent thermal conductivity and hermetic sealing. | Aerospace, military, high-power devices |
-| **Organic RDL** | Redistribution layer on organic substrate to reroute I/Os. Enables fine-pitch and advanced packaging. | High-density interposers, advanced BGA packages |
-| **Silicon** | Silicon interposer used as carrier for 2.5D/3D integration. Enables very high I/O density and performance. | High-performance computing, GPUs, FPGA stacking |
-| **Glass** | Transparent, rigid carrier for advanced packaging. Low thermal expansion and stable. | MEMS devices, optical sensors, specialty applications |
 
 #### Interconnection Options
 
@@ -243,19 +242,6 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
   - Marking - Package labeling with part number, lot, and traceability information to identify the package
   - Package dicing <br/>
 ##### **Flip chip packaging**
-  - Bump formation on Si
-      1. Before Reflow <br/>
-        - Solder is deposited on UBM (Under Bump Metallization) on silicon <br/>
-        - Formed by electroplating/solder paste printing/ball placement <br/>
-        - Bump shape is irregular or column-like <br/>
-        - Solder is solid, and the mechanical strength is low <br/>
-      2. After Reflow <br/>
-        - Solder is melted and re-solidified <br/>
-        - Surface tension forms a uniform spherical bump <br/>
-        - Proper wetting to UBM occurs <br/>
-        - Strong mechanical and electrical joint <br/>
-        - Final bump height and diameter are defined <br/>
-<br/>
 
 | Step | Process | Description |
 |-----|--------|-------------|
@@ -270,16 +256,59 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 | 9 | **Marking** | Package is marked with identification, lot number, and traceability information. |
 | 10 | **Ball Mounting & Reflow** | Solder balls are mounted on the substrate side and reflowed to enable PCB-level connections (BGA). |
 
-<img width="500" height="226" alt="image" src="https://github.com/user-attachments/assets/d29fa7e3-a1b4-4836-a00e-6d4850816707" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/ed773c0f-e712-4619-9dc1-c28a2f104f15" />
+
+<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/d29fa7e3-a1b4-4836-a00e-6d4850816707" />
 
 #### Wafer-level Packaging
-##### Reconstitution process
-- Known good dies are picked and placed on a temporary carrier from the wafer
-- Modling compound is applied, and the temporary carrier is removed. We get a reconstituted wafer, which is used for further processes
+- Wafer-level packaging performs most packaging steps at the wafer stage, enabling ultra-thin packages, shorter interconnects, and improved electrical performance.
 
-##### RDL preparation
-- Dielectric is coated on the carrier
-- 1st RDL metal layer patterning, and is continued with dielectric and metal layers alternatively as per the requirement
+##### WLCSP (Wafer-Level Chip Scale Package)
+- Package size is approximately equal to the die size.
+- Redistribution Layer (RDL) and solder bumps are formed directly on the original wafer.
+- Limited I/O count due to die-size constraint.
+- Widely used in compact and low-power mobile devices.
+
+##### FI-CSP (Fan-In Chip Scale Package)
+- I/O pads are routed within the die footprint
+- Simple structure with lower cost compared to fan-out solutions.
+- Limited scalability for high I/O counts.
+- Suitable for small dies with modest connectivity needs.
+- Common in sensors and low-pin-count ICs.
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/793d79f1-1070-424c-abf4-b1d7618bb4ed" />
+
+##### Reconstitution Process
+- Known Good Dies (KGDs) are picked from the original wafer and placed on a temporary carrier.
+- Dies are arranged in a predefined layout to enable fan-out routing.
+- Molding compound is applied to encapsulate the dies.
+- The temporary carrier is removed, forming a reconstituted wafer
+- This wafer is used for RDL formation, bumping, and further processing.
+
+##### FO-WLP (Fan-Out Wafer-Level Packaging)
+- Uses a reconstituted wafer where known good dies are embedded in molding compound.
+- Redistribution Layers (RDL) are formed to fan out I/O pads beyond the die footprint.
+- Supports higher I/O density compared to WLCSP and FI-CSP.
+- Enables thinner packages with improved electrical and thermal performance.
+- Eliminates the need for a laminate substrate.
+- Commonly used in application processors, RF ICs, and high-density mobile devices.
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/321a5eae-661a-4576-b9f6-b8c781da4a84" />
+
+##### InFO-oS (Integrated Fan-Out on Substrate)
+- Combines fan-out RDL technology with a substrate.
+- Improves power delivery, mechanical strength, and routing capability.
+- Supports higher bandwidth and better signal integrity.
+- Reduces package thickness compared to traditional flip-chip packages.
+- Widely used in high-performance mobile SoCs.
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/4e48e7ca-e957-4ae5-b0e2-1f0551cee869" />
+
+##### InFO-PoP (Integrated Fan-Out Package-on-Package)
+- Fan-out package designed to support vertical stacking of memory on logic die.
+- Enables tight integration of processor and DRAM.
+- Reduces signal latency between logic and memory.
+- Saves board space in mobile applications.
+- Commonly used in smartphones and compact consumer electronics.
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/d8e42af0-0d8d-49c1-b18a-3c6a035606d1" />
+
 
 ## Module 3 
 ### Ansys Icepak Lab – Thermal Analysis of a Flipchip BGA 
