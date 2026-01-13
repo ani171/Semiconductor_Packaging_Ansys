@@ -159,7 +159,13 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 > - RDL is typically a thin metal layer (Cu) deposited on a polymer layer.  
 > - Requires photolithography to define fine traces.  
 > - Enables high-density routing without increasing substrate size.  
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/f863f356-e749-4bb6-9886-cdb905de6a4e" />
+
+<figure>
+  <img width="1475" height="933" alt="image" src="https://github.com/user-attachments/assets/0d84b609-254b-4783-bb06-3dfe0ca89b1e" />
+  <figcaption>
+    <em>Figure: A cross-sectional view of a chip with RDL technology (Source: Hanol Publishing)</em>
+  </figcaption>
+</figure>
 
 #### 2.3D Package 
 
@@ -344,6 +350,24 @@ Advanced packaging techniques are used to integrate multiple dies on a single su
 
 ## Module 3 
 ### Ansys Icepak Lab – Thermal Analysis of a Flipchip BGA 
+- Electronic devices consume power and generate heat as they operate. This heat raises the temperature of components that include semiconductor products, which can compromise the functionality, reliability, and safety of electronic equipment. Therefore, electronic equipment must have proper cooling systems to keep the temperature of components below a certain level in any environment.
+- Thermal analysis, thus, becomes an essential test as heat dissipation is one of the crucial roles of semiconductor packages. Therefore, generated heat, the heat dissipation effect of the package material and structure, and the temperature effect when the semiconductor package is applied to the system must be accurately understood in advance to be reflected in the package design.
+- In order to perform and utilize thermal analysis on a semiconductor package, it is necessary to define the key temperature points on the package. The main temperature points of the package are ambient temperature (Ta), junction temperature (Tj), case temperature (Tc), and board temperature (Tb). The temperature for package specifications is usually either Tj max. or Tc max., terms which refer to the maximum temperature that ensures the semiconductor device operates normally. 
+
+<figure>
+  <img width="1344" height="549" alt="image" src="https://github.com/user-attachments/assets/b9b3091c-90cc-4c98-ba75-b1b4fc945c91" />
+  <figcaption>
+    <em>Figure: Key temperature points of the package (Source: SK Hynix Newsroom)</em>
+  </figcaption>
+</figure>
+
+| Symbol | Name                              | Formula     |
+|--------|-----------------------------------|------------|
+| Ja     | Junction-to-ambient thermal resistance | (Tj-Ta) / P |
+| Jc     | Junction-to-case thermal resistance    | (Tj-Tc) / P |
+| Jb     | Junction-to-board thermal resistance   | (Tj-Tb) / P |
+
+
 #### Step 1: 
 - Insert Icepak Design
 - Open ANSYS Workbench
