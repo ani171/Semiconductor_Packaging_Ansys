@@ -566,7 +566,25 @@ The Bathtub Curve is a reliability model widely used in the semiconductor indust
 
 ## Module 5
 ### Model the Wire Bond Package in Ansys AEDT 
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/124409f2-b7b2-487b-a54a-425fe4772a00" />
+The main focus of this lab exercise is to build the complete cross-section of a wire bond package, including die, substrate, bonding wires, and mold compound, rather than performing any simulation or analyses.
+<figure>
+  <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/124409f2-b7b2-487b-a54a-425fe4772a00" />
+  <figcaption><em>Figure:Step-by-step process of modeling a wire bond package in Ansys AEDT, from wafer preparation to electrical testing <./em></figcaption>
+</figure>/>
+
+#### Wire Bond Package Specifications
+
+| Component          | Dimensions (mm)   | Position (X,Y,Z) (mm) | Thickness (mm) | Material / Type           | Notes / Additional Info           |
+|-------------------|-----------------|----------------------|----------------|--------------------------|----------------------------------|
+| **Die**           | 3 x 3           | (0, 0, 0)            | 0.2            | Silicon                  | Centered at origin               |
+| **Substrate**     | 5 x 5           | (-1, -1, -0.5)       | 0.5            | FR4                      | Positioned below die (-Z)       |
+| **Epoxy**         | 3 x 3           | (0, 0, 0)            | -0.1           | Modified Epoxy           | Between die and substrate       |
+| **Die Bond Pad 1**| 0.2 x 0.2       | (0.2, 0.2, 0.2)      | 0.005          | Metal Pad(Cu)            | On die                          |
+| **Die Bond Pad 2**| 0.2 x 0.2       | (0.5, 0.2, 0.2)      | 0.005          | Metal Pad(Cu)            | On die                          |
+| **Substrate Pad** | 0.2 x 0.2       | (0.2, -0.8, -0.1)    | 0.005          | Metal Pad(Cu)            | On substrate                    |
+| **Bond Wire**     | -               | -                    | 0.025 (diam.)  | Gold                     | h1 = 0.2mm, h2 = 0.305mm       |
+| **Molding Compound** | 5 x 5        | (-1, -1, -0.1)       | 1.2            | Epoxy_Kevlar             | Encapsulating package           |
+
 
 #### Step 1: 
 - Launch ANSYS Electronics Desktop
@@ -578,6 +596,10 @@ The Bathtub Curve is a reliability model widely used in the semiconductor indust
 - Set the die thickness to 0.2 mm
 - Rename the object to die
 - Assign material: Silicon
+
+| Die Geometry| Die Material selection |
+|----------------------------|----------------------------|
+| <img width="400" height="839" alt="image" src="https://github.com/user-attachments/assets/9ebc1f17-0247-440a-8571-91b4afe423c0" />| <img width="400" height="839" alt="image" src="https://github.com/user-attachments/assets/040f3c03-d5ac-4b44-a60a-1120decca009" />|
 
 #### Step 3: Create the Substrate
 - Draw another rectangle using the same tool
@@ -609,45 +631,6 @@ The Bathtub Curve is a reliability model widely used in the semiconductor indust
 - Create a rectangular mold compound to encapsulate the die and bond wires
 - Set the mold thickness to 1.2 mm
 - Assign an epoxy molding compound (EMC) material
-
-<details>
-<summary>Dimensions, Positions and Materials overview</summary>
-
-- Die dimensions <br>
-    - 3mm x 3mm 
-    - Positions (0,0,0) for center
-    - Thickness = 0.2mm
-    - Silicon
-- Substrate dimensions
-    - 5mm x 5mm
-    - Positions (-1,-1,-0.1)
-    - Thickness = 0.5mm (Keep it -0.5 because me need it in -z direction, below the die)
-    - FR4 Material
-- Epoxy
-    - Positions (0,0,0)
-    - Thickness = -0.1
-    - 3mm x 3mm
-    - Modified epoxy material
-- Bond pad on die
-    - 0.2 x 0.2
-    - First one (0.2,0.2,0.2)
-    - Second one (0.5,0.2,02)
-    - Thickness = 0.005mm
-- Bond pad on substrate
-    - 0.2 x 0.2
-    - First one (0.2,-0.8,-0.1)
-    - Thickness = 0.005mm
-- Bond wire
-    - JEDEC 4-point type
-    - h1= 0.2mm
-    - h2=0.305mm (h2 should be higher)
-    - diameter = 0.025mm
-- Molding compound
-    - 5 x 5mm
-    - Positions - (-1,-1,-0.1)
-    - Material - Epoxy_Kevlar
-    - Thickness = 1.2mm
-</details>
 
 <p align="left">
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/c3e8b03e-5b6f-4e23-a047-d60a4470287f" />
